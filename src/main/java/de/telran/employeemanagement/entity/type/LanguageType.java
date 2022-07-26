@@ -31,7 +31,7 @@ public enum LanguageType {
                 .findFirst()
                 .orElseThrow(
                         () -> new ResponseStatusException(
-                                HttpStatus.CONFLICT,
+                                HttpStatus.NOT_FOUND,
                                 String.format("Language with id {%s} doesn't exist", languageId)
                         )
                 );
@@ -51,7 +51,7 @@ public enum LanguageType {
                 .findFirst()
                 .orElseThrow(
                         () -> new ResponseStatusException(
-                                HttpStatus.CONFLICT,
+                                HttpStatus.NOT_FOUND,
                                 String.format("Language {%s} doesn't exist", externalId)
                         )
                 );
